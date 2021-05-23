@@ -1,0 +1,385 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/howtoplay.css">
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <!-- <img src="img/riot.png" alt=""> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="howtoplay.html">Game</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Champions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <!-- 下拉選單 -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+            </ul>
+            <!-- 搜尋 -->
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <!-- 登入註冊 -->
+            <ul class="navbar-nav float-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="document.getElementById('login_id').style.display='block'"
+                        style="width:auto;">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Playnow.html">Play Now</a>
+                </li>
+                <!-- 切換語言 下拉選單 -->
+                <li class="nav-item lang_img">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="25" fill="currentColor"
+                            class="bi bi-globe" viewBox="0 0 16 16">
+                            <path
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z" />
+                        </svg>
+                        <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">ab</a>
+                            <a class="dropdown-item" href="#">aa</a>
+                            <a class="dropdown-item" href="#">af</a>
+                            <a class="dropdown-item" href="#">en</a>
+                            <a class="dropdown-item" href="#">zh-tw</a>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div id="login_id" class="login">
+                <form class="login_content">
+                    <div class="user_psw_container">
+                        <label for="">Username:</label>
+                        <input type="text" class="form-control" placeholder="Enter Username" name="uname" required>
+                        <label for="">Password:</label>
+                        <input type="password" class="form-control" placeholder="Enter password"
+                            id="exampleInputPassword1">
+                        <br>
+                        <input type="checkbox" checked="checked" name="remember"><label for="">Remember Me</label>
+                    </div>
+                    <div class="login_btn_container">
+                        <button type="login_submit" class="btn btn-primary">Login</button>
+                        <span onclick="document.getElementById('login_id').style.display='none'"
+                            class="cancelbtn btn btn-danger">Cancel</span>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- welcome -->
+    <div class="Welcome_container">
+        <div class="welcome_text_1">Welcome to the rift</div>
+        <div class="welcome_text_2">LEARN THE BASICS <br></div>
+        <div class="welcome_text_3">
+            There’s a lot to learn about League, so we’ll start with the essentials. Explore the guide <br>
+            below to get the rundown on the most popular game mode.
+        </div>
+    </div>
+    <!-- what is lol -->
+    <div class="what_is_lol">
+        <video src="img/what-is-league-of-legends-4e3d9714805dc82373c3a069ed9ec103.mp4" autoplay="autoplay" muted="true"
+            loop></video>
+        <div class="what_is_lol_text_container">
+            <div class="what_is_lol_text1">WHAT IS LEAGUE OF LEGENDS?</div>
+            <div class="what_is_lol_text2">
+                League of Legends is a team-based strategy game where two teams of fivepowerful <br>
+                champions face off to destroy the other’s base. Choose from over 140 champions to make <br>
+                epic plays, secure kills, and take downtowers as you battle your way to victory.</div>
+        </div>
+    </div>
+    <!-- lol_map_produce_container -->
+    <div id="id_lol_map_produce_container">
+        <div id="lol_map_produce1" class="lol_map_produce lol_map_produce_sm_container">
+            <div id="lol_produce1" class="lol_produce lol_produce_anim">
+                <div class="lol_produce_sm">
+                    <div class="lol_map_title">DESTROY THE BASE <br></div>
+                    <div>The Nexus is the heart of both teams’ bases. Destroy the enemy’s Nexus first to win the game.
+                    </div>
+                    <div id="lol_content1" class="lol_content lol_content_anim">
+                        <div>
+                            <div class="lol_content_title">
+                                YOUR NEXUS
+                            </div>
+                            <br>
+                            Your Nexus is where minions spawn. Behind your Nexus is the Fountain, where you can quickly
+                            replenish health and mana and access the Shop.
+                        </div>
+                        <!-- <div>
+                    ENEMY NEXUS<br>
+                    Located in the enemy team’s base, the enemy Nexus is just like yours. Destroying the enemy Nexus
+                    wins your team the game.
+                </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lol_map_produce lol_map_produce_sm_container2">
+            <div id="lol_produce2" class="lol_produce lol_produce_anim">
+                <div class="lol_produce_sm">
+                    <div class="lol_map_title">CLEAR THE PATH <br></div>
+                    <div>Your team needs to clear at least one lane to get to the enemy Nexus. Blocking your path are
+                        defense
+                        structures called turrets and inhibitors. Each lane has three turrets and one inhibitor, and
+                        each
+                        Nexus is guarded by two turrets.</div>
+                    <div id="lol_content2" class="lol_content lol_content_anim">
+                        <div>
+                            <div class="lol_content_title">
+                                TURRETS
+                            </div>
+                            <br>
+                            Turrets deal damage to enemy minions and champions, and provide limited vision from the Fog
+                            of
+                            War
+                            for their team. Attack these structures with minions ahead of you to avoid damage and charge
+                            ahead.
+                        </div>
+                        <!-- <div>
+                    INHIBITORS <br>
+                    Each Inhibitor is protected by a Turret. When destroyed, super minions will spawn in that lane for
+                    several minutes. Afterward, the Inhibitor will respawn and Super Minions will stop spawning.
+                </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lol_map_produce lol_map_produce_sm_container3">
+            <div id="lol_produce3" class="lol_produce lol_produce_anim">
+                <div class="lol_produce_sm">
+                    <div class="lol_map_title">TAKE ON THE JUNGLE <br></div>
+                    <div>In between the lanes is the jungle, where neutral monsters and jungle plants reside. The two
+                        most
+                        important monsters are Baron Nashor and the Drakes. Killing these units grants unique buffs for
+                        your
+                        team and can also turn the tide of the game.</div>
+                    <div id="lol_content3" class="lol_content lol_content_anim">
+                        <div>
+                            <div class="lol_content_title">
+                                BARON NASHOR
+                            </div>
+                            <br>
+                            BARON NASHOR
+                            Baron Nashor is the most powerful monster in the jungle. Killing Baron grants the slayer’s
+                            team
+                            bonus attack damage, ability power, empowered recall, and greatly increases the power of
+                            nearby
+                            minions.
+                        </div>
+                        <!-- <div>
+                    DRAKES <br>
+                    Drakes, or dragons, are powerful monsters that grant unique bonuses depending on the element of the
+                    drake your team slays. There are four Elemental Drakes and one Elder Dragon.
+                </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- power up ur champion -->
+    <div class="power_text_container">
+        <div class="power_title">POWER UP YOUR CHAMP</div>
+        <span>Champions get stronger by earning experience to level up and gold to buy more powerful <br>
+            items as the gameprogresses.Staying on top of these two factors is crucial to <br>
+            overpowering the enemy team and destroying their base.</span>
+    </div>
+
+    <div class="power_ur_champion_container">
+        <div class="power_ur_champion_video_sm_container">
+            <div class="power_ur_champion_video">
+                <video src="img/experience-720-d5afe06bd7f50d8078d0a7b635c726b2.webm" autoplay="autoplay" muted="true"
+                    loop></video>
+            </div>
+            <div class="power_ur_champion_video">
+                <video src="img/gold-720-6154cdb7e69cba368f79ce3215ba8d65.webm" autoplay="autoplay" muted="true"
+                    loop></video>
+            </div>
+            <div class="power_ur_champion_video">
+                <img src="img/shopkeeper-b3c23be268a6ca5e2be8888cb145f50c.jpg" alt="">
+            </div>
+        </div>
+        <div class="accordion_container">
+            <button class="accordion" onclick="currentpvSlide(1)">EARN EXPERIENCE</button>
+            <div class="panel">
+                <p>When champions earn a certain amount of experience, they level up and can unlock or strengthen
+                    abilities and raise their base stats. Gain experience by killing enemy units and champions,
+                    assisting in a kill, and destroying defense structures.</p>
+            </div>
+            <button class="accordion" onclick="currentpvSlide(2)">EARN GOLD</button>
+            <div class="panel">
+                <p>Gold is the in-game currency to buy items for your champion. Earn gold by killing enemy units
+                    and champions, assisting in a kill, destroying defense structures, and equipping gold income
+                    items.</p>
+            </div>
+            <button class="accordion" onclick="currentpvSlide(3)">SHOP</button>
+            <div class="panel">
+                <p>The Shop is where you can buy and sell items with gold you’ve earned. It can only be accessed
+                    while you are at the Fountain.</p>
+            </div>
+        </div>
+    </div>
+    <!-- abilities -->
+    <!-- <div>
+        <div>
+            <h1>UNLOCK YOUR ABILITIES</h1>
+        </div>
+        <div class="abilities_container">
+            <div class="">
+                <img src="img/champion-4ca54118d635490143bfb7c545b2b213.png" alt="">
+            </div>
+            <div class="base_container">
+                <img src="img/base-a35ef0f11924ebef6aa19b92e122fde3.png" alt="">
+                <div>
+                    <div class="abilities1 abilities">
+                        <img src="img/abilities-38ba25f77f8a288f904432f1edccfc8c.png" alt="">
+                    </div>
+                    <div class="">
+                        <img src="img/extras-79d1652d353770fdb532cbf663656da9.png" alt="">
+                    </div>
+                    <div class="abilities2 abilities">
+                        <img src="img/spells-7f089c1a8f56f6d2af62bd0ad9a60916.png" alt="">
+                    </div>
+                    <div class="abilities3 abilities">
+                        <img src="img/items-93b72410a63044875fb44bf1818b112a.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> -->
+    <footer>
+        <div class="footer_riotimg">
+            <img src="img/riot.png" alt="">
+        </div>
+        <div class="footer_icon">
+            <ul>
+                <a href="https://www.youtube.com/user/riotgamesinc">
+                    <li>
+                        <i class="fab fa-youtube fa-5x"></i>
+                    </li>
+                </a>
+                <a href="https://twitter.com/leagueoflegends">
+                    <li>
+                        <i class="fab fa-twitter-square fa-5x"></i>
+                    </li>
+                </a>
+                <a href="https://www.facebook.com/leagueoflegends">
+                    <li>
+                        <i class="fab fa-facebook-square fa-5x"></i>
+                    </li>
+                </a>
+                <a href="https://www.instagram.com/leagueoflegends/">
+                    <li>
+                        <i class="fab fa-instagram-square fa-5x"></i>
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="footer_text">
+            <p>™ &amp; © 2021 Riot Games, Inc. League of Legends and all related logos, characters, names and <br>
+                distinctive likenesses thereof are exclusive property of Riot Games, Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // accordion
+        var acc = document.getElementsByClassName('accordion');
+        var i;
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle('active');
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                }
+            });
+        }
+        // slidepower
+        var slidepowerIndex = 1;
+        showSlides(slidepowerIndex);
+        function currentpvSlide(h) {
+            showSlides(slidepowerIndex = h);
+        }
+        function pluspvSlides(h) {
+            showSlides(slidepowerIndex += h);
+        }
+        function showSlides(h) {
+            var l;
+            var slidepower = document.getElementsByClassName('power_ur_champion_video');
+            var accrs = document.getElementsByClassName('accordion');
+            // var 
+            if (l > slidepower.length) {
+                slidepowerIndex = 1;
+            }
+            if (l < 1) {
+                slidepowerIndex = slidepower.length;
+            }
+            for (l = 0; l < slidepower.length; l++) {
+                slidepower[l].style.display = "none";
+            }
+            slidepower[slidepowerIndex - 1].style.display = "block";
+            for (l = 0; l < accrs.length; l++) {
+                accrs[l].className = accrs[l].className.replace(" active", "");
+            }
+            accrs[slidepowerIndex - 1].className += " active";
+        }
+        // login
+        var login = document.getElementById('login_id');
+        window.onclick = function (event) {
+            if (event.target == login) {
+                login.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

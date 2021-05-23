@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/playnow3.css">
+</head>
+
+<body>
+    <div class="bg_Img">
+        <div class="logo_region">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="img/logo_lol.png" alt="">
+                </div>
+            </a>
+
+            <div class="region">
+                <label for="Region:">Region:</label>
+                <select class="custom-select custom-select-lg mb-3">
+                    <option selected>Choose</option>
+                    <option value="1">En</option>
+                    <option value="2">jp</option>
+                    <option value="3">Tw</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="start_text">
+            <div class="start_text1">Step 3</div>
+            <div class="start_text2">Lastly,Create a username and password</div>
+        </div>
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username" id="username" name="uname" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" id="password">
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">I agree</label>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Receive occasional emails from Riot Games.</label>
+            </div>
+            <button type="submit" onclick="submit123()" id="Submit" class="btn btn-primary submit1">Submit</button>
+        </form>
+    </div>
+
+    <script>
+
+        function submit123() {
+            alert('成功');
+        }
+        
+
+    </script>
+</body>
+
+</html>

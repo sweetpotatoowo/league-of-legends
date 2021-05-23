@@ -1,0 +1,124 @@
+/* 背景圖片 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg_Img {
+    position: relative;
+    max-width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+
+.bg_Img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 900px;
+    background-size: cover;
+    background: url(../img/bg_welcome.jpg);
+    filter: blur(5px) brightness(50%);
+    z-index: -1;
+}
+
+/* logo */
+.logo_region {
+    display: flex;
+    /* justify-content: center;
+    align-content: center; */
+    padding: 40px;
+    /* height: 300px; */
+}
+
+.logo {
+    flex: 1;
+    /* height: 200px; */
+    /* text-align: center; */
+}
+
+.logo>img {
+    width: 300px;
+    height: auto;
+    /* text-align: center; */
+}
+
+.region {
+    flex: 1;
+    /* float: right; */
+    text-align: center;
+    position: absolute;
+    right: 0%;
+}
+
+.region>label {
+    color: #d5b26e;
+}
+
+.region>select {
+    width: 70%;
+
+}
+
+/* start_text */
+.start_text {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.start_text1 {
+    font-size: 20px;
+}
+
+.start_text2 {
+    font-size: 100px;
+}
+
+.start_text3 {
+    color: #d5b26e;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.divider {
+    padding: 20px;
+}
+
+.divider>img {
+    max-width: 100%;
+    height: auto;
+}
+
+.email_btn {
+    text-align: center;
+}
+
+.btn {
+    display: block;
+    width: 10%;
+    margin: auto;
+    background-color: black;
+    border: 2px solid #977541;
+    color: #c4b998;
+}
+
+.btn:hover {
+    border: 2px solid #c4b998;
+    color: #d5b26e;
+    background-color: black;
+}
+
+
+.form-floating {
+    width: 30%;
+    display: block;
+    margin: auto;
+}
+
+.email_btn>a {
+    text-decoration: none;
+}

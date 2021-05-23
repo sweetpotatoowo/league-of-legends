@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 導覽列 */
+.navbar {
+    padding: 30px;
+}
+
+.navbar-brand {
+    background-image: url("../img/riot.png");
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+/* login */
+.login {
+    text-align: center;
+}
+
+.login_btn_container>span {
+    margin: 20px;
+}
+
+.login {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.login_content {
+    background-color: white;
+    border: 1px solid gray;
+    margin: 5% auto 15% auto;
+    width: 80%;
+}
+
+.login_content {
+    animation: animatezoom 0.6s;
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* welcome */
+.Welcome_container {
+    background: url(../img/teemo.png);
+    max-width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.welcome_text_2 {
+    font-size: 100px;
+    font-style: italic;
+}
+
+/* what_is_lol */
+.what_is_lol {
+    width: 100%;
+    height: auto;
+    position: relative;
+    /* margin: 0 auto; */
+}
+
+.what_is_lol>video {
+    max-width: 100%;
+    height: auto;
+    filter: brightness(50%);
+
+}
+
+.what_is_lol_text_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+    /* background-color: lightgreen; */
+}
+
+.what_is_lol_text1 {
+    font-size: 70px;
+    font-style: italic;
+    margin:  0 auto;
+    /* background-color: lightcoral; */
+}
+
+/* lol_map_produce_container */
+
+.lol_map_produce_sm_container {
+    background: url(../img/LeagueOfLegends_first.png);
+    
+}
+
+.lol_map_produce_sm_container2 {
+    background: url(../img/LeagueOfLegends_second.png);
+   
+}
+
+.lol_map_produce_sm_container3 {
+    background: url(../img/LeagueOfLegends_third.png);
+    
+}
+
+.lol_map_produce {
+    background-color: rgb(0, 0, 0);
+    color: #d5b26e;
+    max-width: 100%;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-position:right;
+    background-attachment: fixed;
+    /* background-size: cover; */
+    background-size: 70%;
+    overflow: hidden;
+    /* margin: 0 auto;
+    padding: 40px; */
+}
+
+.lol_produce {
+    padding-bottom: 20px;
+}
+
+.lol_map_title {
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+.lol_produce_sm {
+    width: 30%;
+    margin: 20px;
+}
+
+.lol_content {
+    margin-top: 30px;
+    padding-top: 20px;
+    border: 2px solid gray;
+}
+
+.lol_content_title {
+    font-size: 40px;
+}
+
+.power_ur_champion_container {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.power_ur_champion_video_sm_container {
+    flex: 1;
+    width: 50%;
+}
+
+.accordion_container {
+    flex: 1;
+    width: 50%;
+}
+
+/* powerurchamp */
+.power_text_container{
+    text-align: center;
+    padding: 40px;
+}
+.power_title{
+    font-size: 70px;
+    font-style: italic;
+}
+.power_ur_champion_video>video {
+    max-width: 100%;
+    height: auto;
+}
+
+.power_ur_champion_video>img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* abilities */
+/* .base_container {
+    float: left;
+} */
+/* footer */
+footer {
+    background-color: black;
+    text-align: center;
+    margin-bottom: -20px;
+}
+
+.footer_riotimg>img {
+    width: 200px;
+    height: auto;
+}
+
+.footer_icon {
+    padding: 20px;
+}
+
+.footer_icon>ul>a>li {
+    display: inline;
+    padding: 20px;
+}
+
+.footer_icon>ul>a>li>i {
+    color: gray;
+}
+
+.footer_icon>ul>a>li>i:hover {
+    color: white;
+}
+
+.footer_text {
+    color: gray;
+}

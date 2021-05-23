@@ -1,0 +1,688 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <!-- <img src="img/riot.png" alt=""> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="howtoplay.html">Game</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Champions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <!-- 下拉選單 -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+            </ul>
+            <!-- 搜尋 -->
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <!-- 登入註冊 -->
+            <ul class="navbar-nav float-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="document.getElementById('login_id').style.display='block'"
+                        style="width:auto;">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Playnow.html">Play Now</a>
+                </li>
+                <!-- 切換語言 下拉選單 -->
+                <li class="nav-item lang_img">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="25" fill="currentColor"
+                            class="bi bi-globe" viewBox="0 0 16 16">
+                            <path
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z" />
+                        </svg>
+                        <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">ab</a>
+                            <a class="dropdown-item" href="#">aa</a>
+                            <a class="dropdown-item" href="#">af</a>
+                            <a class="dropdown-item" href="#">en</a>
+                            <a class="dropdown-item" href="#">zh-tw</a>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div id="login_id" class="login">
+                <form class="login_content">
+                    <div class="user_psw_container">
+                        <label for="">Username:</label>
+                        <input type="text" class="form-control" placeholder="Enter Username" name="uname" required>
+                        <label for="">Password:</label>
+                        <input type="password" class="form-control" placeholder="Enter password"
+                            id="exampleInputPassword1">
+                        <br>
+                        <input type="checkbox" checked="checked" name="remember"><label for="">Remember Me</label>
+                    </div>
+                    <div class="login_btn_container">
+                        <button type="login_submit" class="btn btn-primary">Login</button>
+                        <span onclick="document.getElementById('login_id').style.display='none'"
+                            class="cancelbtn btn btn-danger">Cancel</span>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- banner 影片疊影片 在下面的影片模糊 在上面的影片縮小置中 外層要有邊框 -->
+    <div class="banner">
+        <div class="video_down">
+            <video autoplay="autoplay" muted="true" loop>
+                <source
+                    src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-us/production/en-us/static/hero-0632cbf2872c5cc0dffa93d2ae8a29e8.webm"
+                    type="video/webm">
+                <source
+                    src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-us/production/en-us/static/hero-de0ba45b1d0959277d12545fbb645722.mp4"
+                    type="video/mp4">
+            </video>
+        </div>
+        <div class="video_over">
+            <video autoplay="autoplay" muted="true" loop>
+                <source
+                    src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-us/production/en-us/static/hero-0632cbf2872c5cc0dffa93d2ae8a29e8.webm"
+                    type="video/webm">
+                <source
+                    src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-us/production/en-us/static/hero-de0ba45b1d0959277d12545fbb645722.mp4"
+                    type="video/mp4">
+            </video>
+        </div>
+        <div class="banner_logo">
+            <img src="img/logo_lol.png" alt="">
+        </div>
+        <div class="all_btn">
+            <a href="Playnow.html">
+                <button type="button" class="btn btn-primary">PLAY FOR FREE</button>
+            </a>
+        </div>
+    </div>
+    <!-- 點圖片會有超連結 邊框右上角會有折角 -->
+    <!-- <div class="bd_ctn">
+            <div class="bd_brk bd">
+                <div class="bag_font">2021:
+                    新賽季即將開始</div>
+            </div>
+            <div class="over_bg"></div>
+        </div> -->
+    <!-- news -->
+    <div class="box_container">
+        <!-- <div class="news_title">News</div> -->
+        <a href="https://www.youtube.com/watch?v=98CIAkqX6ZU">
+            <div class="box">
+                <div class="box_inner">
+                    <div class="box_img">
+                        <img src="img/SB_Viego_YouTube_Champion_Spotlight_NO-TEXT_02.jpg" alt="">
+                    </div>
+                    <div class="box_new_text">
+                        <div class="box_text box_text_color">
+                            GAME UPDATES
+                        </div>
+                        <div class="box_text box_text_color2">
+                            Champion Spotlight
+                        </div>
+                        <div class="box_text box_text_color3">
+                            For her, he'll do anything.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=TCQ9MEZL1Y4">
+            <div class="box">
+                <div class="box_inner">
+                    <div class="box_img">
+                        <img src="img/Viego_Champion_Theme_Banner.jpg" alt="">
+                    </div>
+                    <div class="box_new_text">
+                        <div class="box_text box_text_color">
+                            MEDIA
+                        </div>
+                        <div class="box_text box_text_color2">
+                            Champion Theme
+                        </div>
+                        <div class="box_text box_text_color3">
+                            Listen to the official theme for Viego.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="https://na.leagueoflegends.com/en-us/news/dev/champion-insights-viego/">
+            <div class="box">
+                <div class="box_inner">
+                    <div class="box_img">
+                        <img src="img/00_Header_RK_Concept_final_Web.jpg" alt="">
+                    </div>
+                    <div class="box_new_text">
+                        <div class="box_text box_text_color">
+                            DEV
+                        </div>
+                        <div class="box_text box_text_color2">
+                            Champion Insights
+                        </div>
+                        <div class="box_text box_text_color3">
+                            ...So you’re saying he’s available?
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </a>
+    </div>
+    <div class="view_all_container">
+        <a href="https://na.leagueoflegends.com/en-us/news/">
+            <div class="view_all">
+                <p>VIEW ALL</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- season 2021超連結圖片 -->
+    <div class="season_pc">
+        <img src="img/S21_-_Promo_Module_-_ENG.jpg" alt="">
+    </div>
+    <!-- 選擇腳色大總管 -->
+    <div class="choose_champion_all_container">
+        <!-- <div class="champions_text">Champions</div> -->
+        <!-- 選擇腳色文字 -->
+        <div class="champion_text">
+            <h1>CHOOSE YOUR <br>
+                <span>CHAMPION</span> <br>
+            </h1>
+            <p>Whether you like to dive straight into the fray, support your teammates, <br>
+                or something in between, there’s a
+                spot for you on the Rift.</p>
+            <div class="all_btn">
+                <div class="choose_champion_btn">
+                    <div class="choose_champion_btn_left">
+                        <a href="#">
+                            <button type="button" class="btn btn-warning">Discover more champions</button>
+                        </a>
+                    </div>
+                    <div class="choose_champion_btn_right">
+                        <a href="Playnow.html">
+                            <button type="button" class="btn btn-primary">Play Now</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 選擇腳色 -->
+        <div class="choose_champion_all_container2">
+            <div class="choose_champion_icon_dot_container">
+                <div class="choose_champion_icon_dot">
+                    <div class="choose_champion_icon" onclick="currentSlide(1)">
+                        <div class="icon_assassin"><img src="img/Slayer_icon.png" alt="">
+                        </div>
+                        <div class="icon_name">Assassins</div>
+                        <div class="dot" onclick="currentSlide(1)"></div>
+                    </div>
+                    <div class="choose_champion_icon" onclick="currentSlide(2)">
+                        <div class="icon_Fighter"><img src="img/Fighter_icon.png" alt="">
+                        </div>
+                        <div class="icon_name">Fighters</div>
+                        <div class="dot" onclick="currentSlide(2)"></div>
+                    </div>
+                    <div class="choose_champion_icon" onclick="currentSlide(3)">
+                        <div class="icon_Mage"><img src="img/Mage_icon.png" alt=""></div>
+                        <div class="icon_name">Mages</div>
+                        <div class="dot" onclick="currentSlide(3)"></div>
+                    </div>
+                    <div class="choose_champion_icon" onclick="currentSlide(4)">
+                        <div class="icon_Marksman"><img src="img/Marksmen_icon.png" alt="">
+                        </div>
+                        <div class="icon_name">Marksmans</div>
+                        <div class="dot" onclick="currentSlide(4)"></div>
+                    </div>
+                    <div class="choose_champion_icon" onclick="currentSlide(5)">
+                        <div class="icon_Controller"><img src="img/Controller_icon.png" alt="">
+                        </div>
+                        <div class="icon_name">Supports</div>
+                        <div class="dot" onclick="currentSlide(5)"></div>
+                    </div>
+                    <div class="choose_champion_icon" onclick="currentSlide(6)">
+                        <div class="icon_Tank"><img src="img/Tank_icon.png" alt=""></div>
+                        <div class="icon_name">Tanks</div>
+                        <div class="dot" onclick="currentSlide(6)"></div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <!-- 左邊袋子小圓球底下的輪播影片 -->
+                <div class="mySlidesVideo">
+                    <video src="img/assassin-8bb741f0fe6d55c0844ede6e3fe1b5ad.webm" autoplay="autoplay" muted="true"
+                        loop>
+                    </video>
+                </div>
+                <div class="mySlidesVideo">
+                    <video src="img/fighter-56f0e81707c5104dd35ee7a2b1d8e72a.webm" autoplay="autoplay" muted="true"
+                        loop>
+                    </video>
+                </div>
+                <div class="mySlidesVideo">
+                    <video src="img/mage-8beae0975cae649908a0d539435306db.webm" autoplay="autoplay" muted="true" loop>
+                    </video>
+                </div>
+                <div class="mySlidesVideo">
+                    <video src="img/marksman-d7367883b0979249f9309c03efdd23d9.webm" autoplay="autoplay" muted="true"
+                        loop>
+                    </video>
+                </div>
+                <div class="mySlidesVideo">
+                    <video src="img/support-10b76f08757ee3ce7169c344108b457b.webm" autoplay="autoplay" muted="true"
+                        loop>
+                    </video>
+                </div>
+                <div class="mySlidesVideo">
+                    <video src="img/tank-7bc533fcd17c3eca769764141020debb.webm" autoplay="autoplay" muted="true" loop>
+                    </video>
+                </div>
+            </div>
+
+            <!-- 右半邊袋子輪播圖片 -->
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <img src="img/Assassins_akari.png">
+                    <p>Akali</p>
+                    <!-- 反光鏡 -->
+                    <div class="glass">
+                    </div>
+                    <!-- border轉圈圈 -->
+                    <div class="loading">
+                    </div>
+                </div>
+                <div class="mySlides">
+                    <img src="img/Fighters_yasuo.png">
+                    <p>Yasuo</p>
+                    <div class="glass">
+                    </div>
+                    <div class="loading">
+                    </div>
+                </div>
+                <div class="mySlides">
+                    <img src="img/Mages_lux.png">
+                    <p>Lux</p>
+                    <div class="glass">
+                    </div>
+                    <div class="loading">
+                    </div>
+                </div>
+                <div class="mySlides">
+                    <img src="img/Marksmen_jinx.png">
+                    <p>Jinx</p>
+                    <div class="glass">
+                    </div>
+                    <div class="loading">
+                    </div>
+                </div>
+                <div class="mySlides">
+                    <img src="img/Supports_thresh.png">
+                    <p>Thresh</p>
+                    <div class="glass">
+                    </div>
+                    <div class="loading">
+                    </div>
+                </div>
+                <div class="mySlides">
+                    <img src="img/Tanks_leona.png">
+                    <p>Leona</p>
+                    <div class="glass">
+                    </div>
+                    <div class="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  造型介紹-->
+    <div class="slider_container">
+        <div class="imgstyle_text_container">
+            <div class="imgstyle_text">
+                SLAY WITH <br>
+                <strong>STYLE</strong>
+                <p> Make it personal by changing up the look of your favorite
+                    <br> champions with skins.
+                </p>
+            </div>
+            <div class="style_btn_container">
+                <div class="all_btn">
+                    <a href="Playnow.html">
+                        <button type="button" class="btn btn-primary">Play Now</button>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- 輪播圖片造型 -->
+        <div class="imgstyle_slide">
+            <img src="img/assassin_akari_two.png" alt="">
+        </div>
+        <div class="imgstyle_slide">
+            <img src="img/assassin_akari_three.png" alt="">
+        </div>
+        <div class="imgstyle_slide">
+            <img src="img/assassin_akari_four.png" alt="">
+        </div>
+    </div>
+    <!-- 多種玩法 -->
+    <div class="multiple_ways_maps">
+        <div class="way_to_play_map">
+            <img src="img/summonersrift.jpg" alt="">
+        </div>
+        <div class="way_to_play_map">
+            <img src="img/howlingabyss.jpg" alt="">
+        </div>
+        <div class="way_to_play_map">
+            <img src="img/teamfighttactics.jpg" alt="">
+        </div>
+        <div class="way_to_play_slide_container">
+            <!-- 玩法區 最外層轉圈圈 -->
+            <div class="way_to_play_img">
+            </div>
+            <!-- 玩法區轉圈圈 -->
+            <div class="loading2">
+            </div>
+            <!-- 玩法區輪播影片 -->
+            <div class="play_imgSlide">
+                <video src="img/summonersrift.mp4" muted autoplay loop></video>
+            </div>
+            <div class="play_imgSlide">
+                <video src="img/howlingabyss.mp4" muted autoplay loop></video>
+            </div>
+            <div class="play_imgSlide">
+                <video src="img/teamfighttactics.mp4" muted autoplay loop></video>
+            </div>
+        </div>
+        <div class="play_text_slide_container">
+            <!-- 玩法區 多種玩法 -->
+            <div class="way_to_play">MULTIPLE WAYS TO <br>
+                <span>PLAY</span>
+            </div>
+            <div class="way_to_play_btn_container">
+                <div class="all_btn">
+                    <a href="Playnow.html">
+                        <button type="button" class="btn btn-primary">Play Now</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 玩法區 文字說明 -->
+            <div class="way_to_play_text">THE MOST POPULAR GAME MODE <br>
+                Clear your lane, dive into epic 5v5 team fights, and destroy the enemy nexus before <br>
+                they destroy yours.
+            </div>
+
+            <div class="way_to_play_text">ALL RANDOM, ALL MID <br>
+                Battle across an icy bridge as your team of random champions charge toward the <br>
+                enemy Nexus in this chaotically fun 5v5 game mode.
+            </div>
+
+            <div class="way_to_play_text">A FREE-FOR-ALL WAR FOR SUPREMACY <br>
+                Assemble a squad of champions that battle on your behalf. Outlast all seven of your <br>
+                opponents and become the last person standing.
+            </div>
+            <!-- 玩法區 點擊圖片輪播 -->
+            <div class="way_to_play_click_slide_container">
+                <div class="way_to_play_click_slide" onclick="currentImgSlide(1)">
+                    <img src="img/summonersrift.jpg" alt="">
+                </div>
+                <div class="way_to_play_click_slide" onclick="currentImgSlide(2)">
+                    <img src="img/howlingabyss.jpg" alt="">
+                </div>
+                <div class="way_to_play_click_slide" onclick="currentImgSlide(3)">
+                    <img src="img/teamfighttactics.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 怎麼玩 -->
+    <div class="how_to_play_container">
+        <div class="how_to_play_map">
+            <img src="img/player-guide-map.png" alt="">
+        </div>
+        <div class="how_to_play_text">
+            <div class="how_to_play_down_text">
+                <h1>
+                    START YOUR <br>
+                    <strong> LEGEND</strong> <br>
+                </h1>
+
+                <p>New to League? Get a rundown on the basics for the most <br>
+                    popular game mode.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 精選 -->
+    <div class="featured">
+        <div class="featured_text">
+            <h1>MORE TO <br>
+                <strong>DISCOVER</strong>
+            </h1>
+        </div>
+        <div class="featured_things">
+            <a href="https://www.youtube.com/watch?v=PGYs-zKakqM">
+                <figure class="featured_card">
+                    <img src="img/ThisOrThat2021_Thumbnail_EP02_v4_Client.jpg" alt="">
+                    <figcaption>This or That | Positive <br> Obliteration</figcaption>
+                </figure>
+            </a>
+            <a href="https://universe.leagueoflegends.com/en_US/garen-first-shield/">
+                <figure class="featured_card">
+                    <img src="img/banner720.jpg" alt="">
+                    <figcaption> READ GAREN: FIRST <br> SHIELD</figcaption>
+                </figure>
+            </a>
+        </div>
+    </div>
+    <!-- 最下面的video -->
+    <div class="ss2020_video">
+        <video src="img/ss2020_lux_sylas_1920x1080.mp4" autoplay="autoplay" muted="true" loop></video>
+    </div>
+    <!--  -->
+    <!-- <a href='pageScroll();'>返回頂部</a> -->
+    <!-- footer -->
+    <footer>
+        <div class="footer_riotimg">
+            <img src="img/riot.png" alt="">
+        </div>
+        <div class="footer_icon">
+            <ul>
+                <a href="https://www.youtube.com/user/riotgamesinc">
+                    <li>
+                        <i class="fab fa-youtube fa-5x"></i>
+                    </li>
+                </a>
+                <a href="https://twitter.com/leagueoflegends">
+                    <li>
+                        <i class="fab fa-twitter-square fa-5x"></i>
+                    </li>
+                </a>
+                <a href="https://www.facebook.com/leagueoflegends">
+                    <li>
+                        <i class="fab fa-facebook-square fa-5x"></i>
+                    </li>
+                </a>
+                <a href="https://www.instagram.com/leagueoflegends/">
+                    <li>
+                        <i class="fab fa-instagram-square fa-5x"></i>
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="footer_text">
+            <p>™ &amp; © 2021 Riot Games, Inc. League of Legends and all related logos, characters, names and <br>
+                distinctive likenesses thereof are exclusive property of Riot Games, Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+
+        var slideIndex = 1; //設定圖片從第一張開始輪播
+        showSlides(slideIndex); //宣告showSlides來顯示一個圖像 
+        //宣告當前的位置 n代表的是圖片的index(n=?就是第幾張)
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        //宣告當n+1=plusSlides
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        //宣告
+        function showSlides(n) {
+            var i;  //宣告一個變數i
+            var slides = document.getElementsByClassName('mySlides'); //宣告slides 取得ClassName 'mySlides'
+            var slidesVideo = document.getElementsByClassName('mySlidesVideo');
+            var dots = document.getElementsByClassName('dot');//宣告dots 取得ClassName 'dot'
+            var glass = document.getElementsByClassName('glass')
+            // 輪播腳色圖
+            if (n > slides.length) {
+                slideIndex = 1; //假如n>sildes的長度 則slideIndex =1
+            }
+            if (n < 1) {
+                slideIndex = slides.length; //假如n<1 slideIndex = slides的長度
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; //當i=0;i<slides的長度;i++ 會執行slides[i]  sildes裡的i=圖片 
+            }
+            slides[slideIndex - 1].style.display = "block";
+            // icon底下輪播影片
+            if (n < 1) {
+                slidesIndex = slidesVideo.length;
+            }
+            if (n > slidesVideo.length) {
+                slidesVideo = 1;
+            }
+            for (i = 0; i < slidesVideo.length; i++) {
+                slidesVideo[i].style.display = "none";
+            }
+            slidesVideo[slideIndex - 1].style.display = "block";
+            // 當前的位置
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            dots[slideIndex - 1].className += " active";
+        }
+        // 反光鏡
+        // var showglassIndex = 0;
+        // showglass(showglassIndex);
+        // function currentglassSlide(y) {
+        //     showSlides(slideIndex = y);
+        // }
+        // //宣告當n+1=plusSlides
+        // function plusglassSlides(y) {
+        //     showSlides(slideIndex += y);
+        // }
+        // function showglass(y){
+        //     var g;
+        //     var gla = document.getElementsByClassName('glass');
+        // }
+
+
+        // 玩法區輪播
+        var slideImgIndex = 1;
+        showImgSlides(slideImgIndex);
+        function currentImgSlide(m) {
+            showImgSlides(slideImgIndex = m);
+        }
+        function plusImgSlides(m) {
+            showImgSlides(slideImgIndex += m);
+        }
+        function showImgSlides(m) {
+            var k;
+            var slidesImg = document.getElementsByClassName('play_imgSlide');
+            var imgDot = document.getElementsByClassName('way_to_play_click_slide');
+            var imgTxt = document.getElementsByClassName('way_to_play_text');
+            var imgMap = document.getElementsByClassName('way_to_play_map');
+            if (m > slidesImg.length) {
+                slideImgIndex = 1;
+            }
+            if (m < 1) {
+                slideImgIndex = slidesImg.length;
+            }
+            for (k = 0; k < slidesImg.length; k++) {
+                slidesImg[k].style.display = "none";
+            }
+            slidesImg[slideImgIndex - 1].style.display = "block";
+
+            for (k = 0; k < imgDot.length; k++) {
+                imgDot[k].className = imgDot[k].className.replace(" active", "");
+            }
+            imgDot[slideImgIndex - 1].className += " active";
+
+            for (k = 0; k < imgTxt.length; k++) {
+                imgTxt[k].style.display = "none";
+            }
+            imgTxt[slideImgIndex - 1].style.display = "block";
+
+            for (k = 0; k < imgMap.length; k++) {
+                imgMap[k].style.display = "none";
+            }
+            imgMap[slideImgIndex - 1].style.display = "block";
+
+        }
+        // login
+        var login = document.getElementById('login_id');
+        window.onclick = function (event) {
+            if (event.target == login) {
+                login.style.display = "none";
+            }
+        }
+        // 
+        // function pageScroll() {
+        //     window.scrollBy(0, -10);
+        //     scrolldelay = setTimeout('pageScroll()' , 100);
+        // }
+        // if (document.documentElement.scrollTop == 0) clearTimeout(scrolldelay);
+    </script>
+</body>
+
+</html>

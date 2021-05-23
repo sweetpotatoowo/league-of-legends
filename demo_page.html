@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text_container {
+            width: 50%;
+            /* display: inline; */
+            position: relative;
+        }
+
+        .text1 {
+            position: absolute;
+            animation: movetxt 3s;
+
+        }
+
+        @keyframes movetxt {
+            from {
+                left: -500%;
+            }
+
+            to {
+                left: 0%;
+            }
+        }
+
+        .text1 {
+            display: block;
+        }
+
+        .text2 {
+            /* padding: 20px; */
+            position: absolute;
+            animation: movetxt 4s;
+            /* display: none; */
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="currentSlide(1)">1</button>
+    <button onclick="currentSlide(2)">2</button>
+    <div class="text_container">
+        <div class="text1 text">
+            Turrets deal damage to enemy minions and champions, and provide limited vision from the Fog of War
+            for their team. Attack these structures with minions ahead of you to avoid damage and charge
+            ahead.
+        </div>
+        <div class="text2 text">Your team needs to clear at least one lane to get to the enemy Nexus. Blocking your path
+            are
+            defense
+            structures called turrets and inhibitors. Each lane has three turrets and one inhibitor, and each
+            Nexus is guarded by two turrets.
+        </div>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function showSlides(n) {
+            var i;
+            var slidesVideo = document.getElementsByClassName('text');
+            if (n < 1) {
+                slidesIndex = slidesVideo.length;
+            }
+            if (n > slidesVideo.length) {
+                slidesVideo = 1;
+            }
+            for (i = 0; i < slidesVideo.length; i++) {
+                slidesVideo[i].style.display = "none";
+            }
+            slidesVideo[slideIndex - 1].style.display = "block";
+        }
+
+    </script>
+</body>
+
+</html>

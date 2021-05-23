@@ -1,0 +1,905 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 導覽列 */
+.navbar {
+    padding: 30px;
+}
+
+.navbar-brand {
+    background-image: url("../img/riot.png");
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+/* login */
+.login {
+    text-align: center;
+}
+
+.login_btn_container>span {
+    margin: 20px;
+}
+
+.login {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.login_content {
+    background-color: white;
+    border: 1px solid gray;
+    margin: 5% auto 15% auto;
+    width: 80%;
+}
+
+.login_content {
+    animation: animatezoom 0.6s;
+}
+.psw{
+    font-size: 20px;
+}
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* -------------------------------------分隔線------------------------------------- */
+/* 底層影片 */
+.banner {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 150px;
+}
+
+.video_down {
+    filter: blur(5px);
+}
+
+.video_down>video {
+    width: 100%;
+    height: auto;
+}
+
+/* 上層影片 */
+.video_over {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.video_over>video {
+    width: 90vw;
+    height: auto;
+}
+
+/* banner logo */
+
+
+.banner_logo>img {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    top: 30%;
+    left: 23%;
+    /* margin: -150px 0 0 -150px; */
+}
+
+/* banner btn */
+
+
+.all_btn>a>button {
+    position: absolute;
+    top: 90%;
+    left: 42%;
+    /* padding: 200px; */
+    /* width: 200px; */
+    /* height: 100px; */
+}
+
+.btn-primary {
+    width: 200px;
+    /* padding: 20px; */
+}
+
+.choose_champion_btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.choose_champion_btn_left>a>button {
+    color: white;
+}
+
+.choose_champion_btn_left>a>button:hover {
+    color: white;
+}
+
+/* 長方形移過去右上方會變成折角 */
+
+/* .bd_ctn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bd_brk {
+    width: 500px;
+    height: 180px;
+    position: relative;
+}
+
+.bd_brk::after {
+    content: "";
+    position: absolute;
+    background: white;
+}
+
+.bd_brk,
+.bd_brk::after {
+    clip-path: polygon(84% 0, 100% 31%, 100% 100%, 0% 100%, 0 1%);
+
+}
+
+.bd {
+    background-color: gray;
+}
+
+.bd::after {
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+}
+
+.over_bg {
+    width: 500px;
+    height: 180px;
+    background-color: white;
+    position: absolute;
+    border: 4px solid gray;
+
+}
+
+.over_bg:hover {
+    display: none;
+} */
+/* -------------------------------------分隔線------------------------------------- */
+/* news */
+.box_container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.news_title {
+    /* background-color: black; */
+    display: flex;
+    writing-mode: vertical-lr;
+    /* height: 100vh; */
+    width: 10px;
+    font-size: 20px;
+    float: left;
+}
+
+.box_container>a {
+    text-decoration: none;
+}
+
+.box_text_color {
+    color: gray;
+}
+
+.box_text_color2 {
+    color: black;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.box_text_color3 {
+    color: black;
+}
+
+.box {
+    background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, 0.4) 0) no-repeat 100% 0 / 1.4rem 1.4rem,
+        linear-gradient(-135deg, transparent 1rem, #2baaca 0);
+    border-radius: .3em;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    padding: 4px;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -0.85rem;
+    width: 1.15em;
+    height: 2em;
+    background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, 0.3));
+    transform: rotate(-30deg);
+    transform-origin: bottom right;
+    /* 让三角形的右下角成为旋转的中心 */
+    box-shadow: -.2em .2em .3em -.1em rgba(0, 0, 0, .15);
+    border-bottom-left-radius: inherit;
+    /* 左下角继承border-radius */
+}
+
+.box_inner {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-135deg, transparent 1.6rem, #fff 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_img {
+    flex: 1;
+}
+
+.box_img>img {
+    max-width: 100%;
+    height: auto;
+    margin-left: -20px;
+}
+
+.box_new_text {
+    flex: 1;
+    word-break: break-all;
+}
+
+.box_text {
+    padding: 10px;
+}
+
+.view_all_container {
+    position: relative;
+}
+
+.view_all_container>a {
+    text-decoration: none;
+}
+
+.view_all_container>a>.view_all {
+    color: black;
+    position: absolute;
+    /* background-color: blueviolet; */
+    right: 5%;
+    padding-top: 20px;
+    /* top: 100%; */
+}
+
+/* -------------------------------------分隔線------------------------------------- */
+/* 2021季賽的圖片超連結 */
+.season_pc {
+    margin-top: 100px;
+    text-align: center;
+
+}
+
+.season_pc>img {
+    width: 80%;
+    height: auto;
+    border: 2px solid gray;
+    /* padding-left: -100px; */
+}
+
+/* -------------------------------------分隔線------------------------------------- */
+/* 選擇腳色 */
+.choose_champion_all_container {
+    position: relative;
+    margin-top: 20px;
+    /* width: 100%;
+    height: 100%; */
+    overflow: hidden;
+}
+
+.champions_text {
+    /* background-color: black; */
+    display: flex;
+    writing-mode: vertical-lr;
+    /* height: 100vh; */
+    width: 10px;
+    font-size: 20px;
+    float: left;
+}
+
+.choose_champion_all_container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blueviolet; */
+    /* margin: auto; */
+}
+
+.choose_champion_icon_dot_container {
+    flex: 1;
+    /* background-color: blue; */
+    /* margin: auto; */
+    /* top: 50%; */
+}
+
+.champion_text {
+    z-index: 2;
+    text-align: center;
+    /* padding-top: 100px; */
+    position: absolute;
+    left: 33%;
+}
+
+.champion_text>h1 {
+    font-style: italic;
+}
+
+/* 父層容器 裡頭裝兩個大袋子分左右兩邊 使用flex 讓左右各佔50% */
+
+/* 左半邊大袋子裡頭分上下兩個袋子  */
+
+.choose_champion_icon_dot {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    /* background-color: blueviolet; */
+    /* margin: auto; */
+    /* top: 50%; */
+    margin-top: 400px;
+    /* padding: 40px; */
+}
+
+/* 右半邊大袋子 */
+.slideshow-container {
+    flex: 1;
+    overflow: hidden;
+}
+
+/* 左半邊大袋子的上面袋子 裝icon圖示 */
+.icon_container {
+    /* background-color: blueviolet; */
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50%;
+    text-align: center;
+}
+
+.choose_champion_icon {
+    /* background-color: chocolate; */
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+
+}
+
+.choose_champion_icon img,
+.choose_champion_icon .icon_name {
+    opacity: 0.5;
+}
+
+.choose_champion_icon:hover img {
+    opacity: 1;
+    transform: scale(1.4);
+}
+
+.choose_champion_icon:hover .icon_name {
+    opacity: 1;
+    transform: scale(1.4);
+}
+
+.choose_champion_icon:hover .dot {
+    /* opacity: 1; */
+    background-color: black;
+}
+
+.icon_name {
+    /* display: none; */
+    padding: 20px;
+}
+
+/* 左半邊大袋子的下面袋子 裡頭裝 線 上面有小圓球 */
+
+
+.line {
+    width: 50%;
+    height: 6px;
+    background-color: #bbb;
+    position: absolute;
+    top: 53.5%;
+    z-index: -999;
+}
+
+/* 小圓球 */
+.dot {
+    /* margin-left: 10px; */
+    width: 30px;
+    height: 30px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+    margin: 0 auto;
+    /* margin: 0 auto; */
+    /* float: left; */
+}
+
+.active,
+.dot:hover {
+    border: 2px solid orange;
+    background-color: white;
+}
+
+
+/* 右半邊大袋子 */
+.mySlides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 100px;
+    /* border: 2px solid blueviolet; */
+}
+
+/* 右半邊袋子角色的文字 */
+.mySlides>p {
+    color: black;
+    position: absolute;
+    bottom: 13%;
+    right: 15%;
+    font-size: 36px;
+    z-index: 999;
+}
+
+/* 右半邊大袋子要輪播的圖片 */
+.mySlides>img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    object-fit: contain;
+    /* bottom: 5%; */
+    /* left: 5%; */
+    animation: Imgfadein 10s;
+    /* animation-delay:3s; */
+}
+@keyframes Imgfadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/* border轉圈圈 */
+.loading {
+    width: 600px;
+    height: 600px;
+    /* border: 5px solid salmon; */
+    border-radius: 50%;
+    border-right: 5px solid #d5b26e;
+    border-left: 5px solid#d5b26e;
+    /* border-bottom: 5px solid #d5b26e; */
+    animation: loading 3s infinite linear;
+    position: relative;
+    top: 3%;
+    /* left: 3%; */
+}
+
+/* border轉圈圈 */
+@keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 圖片反光鏡 */
+.glass {
+    width: 600px;
+    height: 900px;
+    clip-path: polygon(55% 0, 0 0, 44% 100%, 100% 100%);
+    background: white;
+    position: absolute;
+    animation: move 3s;
+    /* top: 50%; */
+    left: 80%;
+}
+
+/* 圖片反光鏡動畫 */
+@keyframes move {
+    0% {
+        left: -400;
+    }
+
+    100% {
+        left: 700;
+    }
+}
+
+
+/* icon底下的輪播影片 */
+.mySlidesVideo {
+    padding-top: 80px;
+
+}
+
+.mySlidesVideo>video {
+    /* position: absolute; */
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* -------------------------------------分隔線------------------------------------- */
+/* 選擇造型 */
+/* 輪播圖片造型爺容器 */
+.slider_container {
+    /* background-color: black; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../img/baron_background.jpg);
+    /* filter: brightness(50%); */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+/* 輪播圖片造型父容器 */
+.slider_container .imgstyle_slide {
+    opacity: 0;
+    /* 讓圖片變透明 */
+    /* filter: alpha(opacity=0); 這是IE8及更早的版本條透明度的方法 X=0~100 數值越小越透明 filter是濾鏡 */
+    animation: fade 15s linear infinite;
+    /* fade是自己定義的名字 15s總共幾秒 linear線性的 infinite無窮 */
+}
+
+/* 輪播圖片造型的文字 */
+.imgstyle_text_container {
+    /* padding-top: 130px; */
+    position: absolute;
+    right: 10%;
+    top: 25%;
+    z-index: 2;
+}
+
+.imgstyle_text {
+    font-style: italic;
+    color: white;
+}
+
+.imgstyle_text>strong {
+    font-size: 104px;
+}
+
+.style_btn_container {
+    position: absolute;
+    right: 74%;
+    /* padding: 10px; */
+    /* top: 25%; */
+}
+
+/* 輪播圖片造型 */
+.slider_container .imgstyle_slide>img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    margin: -250px 0 0 -250px;
+    /* overflow: hidden; */
+}
+
+/* 淡入淡出效果 */
+@keyframes fade {
+    6% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    26% {
+        opacity: 0;
+    }
+}
+
+/* 自動輪播淡入淡出 每一張5秒 */
+.slider_container .imgstyle_slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slider_container .imgstyle_slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.slider_container .imgstyle_slide:nth-child(3) {
+    animation-delay: 10s;
+}
+
+/* -------------------------------------分隔線------------------------------------- */
+
+/* 玩法區召喚峽谷背景圖 */
+.multiple_ways_maps {
+    overflow: hidden;
+    /* width: 100%;
+    height: 100%; */
+    position: relative;
+    /* margin-top: 20px; */
+    /* z-index: -2; */
+}
+
+/* 玩法區 多種玩法 */
+.way_to_play {
+    color: white;
+    font-style: italic;
+    font-size: 24px;
+    /* border: 2px solid lawngreen; */
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.way_to_play_btn_container {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+}
+
+/* 玩法區 旋轉的圓點 */
+.way_to_play_img {
+    width: 400px;
+    height: 400px;
+    border: 8px dotted lightcoral;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin: -200px 0 0 -200px;
+    border-radius: 50%;
+    animation: circle 10s infinite;
+}
+
+/* 玩法區 輪播點擊圖片的父父容器 */
+.way_to_play_click_slide_container {
+    width: 200px;
+    height: 200px;
+    /* border: 2px solid lightcoral; */
+    position: relative;
+    top: 40%;
+    left: 80%;
+    /* margin: -100px 0 0 -100px; */
+}
+
+/* 玩法區 輪播點擊的圖片 */
+.way_to_play_click_slide>img {
+    /* position: absolute; */
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    padding: 20px;
+    filter: brightness(200%);
+    /* top: 70%;
+    left: 20%; */
+}
+
+/* 玩法區 最外層圓點border旋轉 */
+@keyframes circle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(120deg);
+    }
+
+    50% {
+        transform: rotate(240deg);
+    }
+
+    75% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* 玩法區 輪播影片 */
+.play_imgSlide>video {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 30%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* 玩法區 border轉圈圈 */
+.loading2 {
+    width: 310px;
+    height: 310px;
+    /* border: 5px solid salmon; */
+    border-radius: 50%;
+    border-right: 5px solid #d5b26e;
+    border-left: 5px solid #d5b26e;
+    /* border-bottom: 5px solid violet; */
+    animation: loading2 3s infinite linear;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin: -155px 0 0 -155px;
+    /* z-index: 2; */
+}
+
+/* border轉圈圈 */
+@keyframes loading2 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 玩法區 矩形框框 */
+.play_text_slide_container {
+    border: 2px solid lightblue;
+    width: 80%;
+    height: 50%;
+    /* margin: 0 auto; */
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    z-index: 0;
+}
+
+/* 玩法區文字說明 */
+.way_to_play_text {
+    color: white;
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    top: 65%;
+    left: 25%;
+    text-align: center;
+    /* margin: -150px 0 0 -150px; */
+}
+
+span {
+    font-size: 88px;
+}
+
+/* -------------------------------------分隔線------------------------------------- */
+
+/* 怎麼玩 */
+.how_to_play_container {
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.how_to_play_map {
+    /* background-color: blueviolet; */
+    flex: 1;
+    /* max-width: 100%;
+    height: 600px; */
+}
+
+.how_to_play_map>img {
+    max-width: 100%;
+    height: auto;
+    /* background-color: blueviolet; */
+}
+
+.how_to_play_text {
+    flex: 1;
+    color: white;
+    text-align: center;
+
+    /* padding-bottom: 120px; */
+    /* margin-left: -100px; */
+}
+
+
+.how_to_play_text strong {
+    font-size: 100px;
+}
+
+/* -------------------------------------分隔線------------------------------------- */
+/* 精選 */
+.featured {
+    text-align: center;
+}
+
+.featured_text strong {
+    font-size: 100px;
+    font-style: italic;
+    /* font-weight:bolder; */
+}
+
+.featured>a {
+    text-decoration: none;
+}
+
+.featured_things>a {
+    color: black;
+}
+
+.featured_card {
+    display: inline-block;
+    background-color: gainsboro;
+    margin: 20px;
+}
+
+/* -------------------------------------分隔線------------------------------------- */
+/* ss2020 video */
+.ss2020_video {
+    overflow: hidden;
+}
+
+/* -------------------------------------分隔線------------------------------------- */
+/* footer */
+footer {
+    background-color: black;
+    text-align: center;
+    margin-bottom: -20px;
+}
+
+.footer_riotimg>img {
+    width: 200px;
+    height: auto;
+}
+
+.footer_icon {
+    padding: 20px;
+}
+
+.footer_icon>ul>a>li {
+    display: inline;
+    padding: 20px;
+}
+
+.footer_icon>ul>a>li>i {
+    color: gray;
+}
+
+.footer_icon>ul>a>li>i:hover {
+    color: white;
+}
+
+.footer_text {
+    color: gray;
+}
